@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const Profile = require("../models/profile");
 
 // All Profiles
 router.get("/", (req, res) => {
@@ -9,7 +10,7 @@ router.get("/", (req, res) => {
 // New Profile Route
 
 router.get("/new", (req, res) => {
-  res.render("profiles/new");
+  res.render("profiles/new", { profile: new Profile() });
 });
 
 // Create Profile Route
