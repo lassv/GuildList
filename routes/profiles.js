@@ -15,7 +15,7 @@ router.get("/new", (req, res) => {
 
 // Create Profile Route
 
-router.get("/", (req, res) => {
+router.post("/", (req, res) => {
   res.send("Create");
 });
 
