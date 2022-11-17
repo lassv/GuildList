@@ -15,7 +15,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 
 const mongoose = require("mongoose");
-mongoose.connect(basedata.mongo, {
+mongoose.connect(process.env.MONGO, {
   useNewUrlParser: true,
 });
 const db = mongoose.connection;
